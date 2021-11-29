@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MiningHelper": {
+      "commandName": "Project",
+      "commandLineArgs": "-run"
+    }
+  }
+}
