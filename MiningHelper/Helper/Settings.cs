@@ -20,7 +20,7 @@ namespace MiningHelper.Helper
             Application.Current.Properties[name] = value;
         }
 
-        private static string _adminrequired = "AdminRequired";
+        private static readonly string _adminrequired = "AdminRequired";
         public static bool AdminRequired { get { return (bool?)GetSettings(_adminrequired) ?? false; } set { SetSettings(_adminrequired, value); } }
 
 

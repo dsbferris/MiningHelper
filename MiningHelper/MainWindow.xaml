@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MiningHelper"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="500" Width="900">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -23,12 +23,15 @@
                     </Style>
                 </ResourceDictionary>
             </StackPanel.Resources>
-            <Button Content="Home" MouseUp="Label_Home_MouseUp"/>
-            <Button Content="Powerplan"  MouseUp="Label_PowerPlan_MouseUp"/>
-            <Button Content="Miner Config"  MouseUp="Label_MinerConfig_MouseUp"/>
-            <Button Content="Log Analyser"  MouseUp="Label_LogAnalyser_MouseUp"/>
+            <Button Content="Home" x:Name="Button_Home" Click="Button_Home_Click"/>
+            <Button Content="Powerplan" x:Name="Button_PowerPlan" Click="Button_PowerPlan_Click"/>
+            <Button Content="Miner Config" x:Name="Button_MinerConfig" Click="Button_MinerConfig_Click"/>
+            <Button Content="Log Analyser" x:Name="Button_LogAnalyser" Click="Button_LogAnalyser_Click"/>
+            <Button Content="Desktop Shortcut" x:Name="Button_NoAdminShortcut" Click="Button_NoAdminShortcut_Click"/>
 
         </StackPanel>
-        <Frame Grid.Row="1" x:Name="frame" Source="Views/Home.xaml" NavigationUIVisibility="Hidden"/>
+        <Frame Grid.Row="1" Name="MainFrame"
+               Source="Views/HomeView.xaml"
+               NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
